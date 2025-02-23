@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex09</title>
+</head>
+<body>
+    Qual o salario? <input type="text" name="" id="sal">
+    <button onclick="confirm()">Confirmar salário</button>
+    <br><br>
+    <button onclick="pagar_100()">Pagar conta de 100</button>
+    <button onclick="pagar_500()">Pagar conta de 500</button>
+    <button onclick="loteria()">Ganhar 2000 na loteria</button>
+    <br><br> 
+    <div id="total"></div>
+</body>
+<script>
+    var salario_atual=0;
+    function confirm(){
+        salario_atual=Number(sal.value);
+        total.innerHTML = `
+        Grana atual: R$${salario_atual}
+        `
+    }
+    function pagar_100(){
+        salario_atual-=100
+        total.innerHTML = `
+        Grana atual: R$${salario_atual}
+        `
+    }
+    function pagar_500(){
+        salario_atual-=500
+        total.innerHTML = `
+        Grana atual: R$${salario_atual}
+        `
+    }
+    function loteria(){
+        salario_atual+=2000
+        total.innerHTML = `
+        Grana atual: R$${salario_atual}
+        `
+    }
+</script>
+</html>

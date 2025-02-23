@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+<body>
+    Digite o valor a ser depositado/retirado: <input type="text" name="" id="valor">    
+    <br><br>
+    <button onclick="dep()">Depositar</button>
+    <button onclick="ret()">Retirar</button>
+</body>
+<script>
+    var num = 0 ;
+    var saldo = 0;
+    function dep(){
+        num = Number(valor.value);
+        saldo += num
+        alert(`Depósito de R$${num} efetuado! Saldo atual: R$${saldo}`)
+    }
+
+    function ret(){
+        num = Number(valor.value);
+        saldo -= num
+        alert(`Retirada de R$${num} efetuada! Saldo atual: R$${saldo}`)
+    }
+
+</script>
+</html>

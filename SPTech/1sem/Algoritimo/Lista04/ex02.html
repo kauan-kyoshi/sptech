@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    Quantos votos o candidato A teve na eleição? <input type="text" name="" id="voto_a"> <br>
+    Quantos votos o candidato B teve na eleição? <input type="text" name="" id="voto_b"> <br>
+    Quantos votos em branco teve na eleição? <input type="text" name="" id="voto_branco"> <br>
+    Quantos votos nulos teve na eleição? <input type="text" name="" id="voto_nulo"> <br>
+    
+    <button onclick="carregar()">Resultado da Eleição</button>
+    <br><br>
+    <div id="voto"></div>
+</body>
+<script>
+    var candidato_A =0
+    var candidato_b =0
+    var votos_branco=0
+    var votos_nulo=0
+    var tot_sono=0
+    
+    function carregar(){
+        candidato_A= Number(voto_a.value);
+        candidato_b =Number(voto_b.value);
+        votos_branco= Number(voto_branco.value)
+        votos_nulo= Number(voto_nulo.value);
+
+        tot_votos = candidato_A + candidato_b +votos_branco + votos_nulo
+        var calc_a = (candidato_A*100)/tot_votos
+        var calc_b = (candidato_b*100)/tot_votos
+        var voto_inv = votos_branco+votos_nulo 
+        var percent_inv = (voto_inv*100)/tot_votos
+
+        voto.innerHTML = `
+        Total de votos: ${tot_votos}  <br>
+    
+        Candidato A: ${calc_a}% (${candidato_A} votos)  <br>
+    
+        Candidato B: ${calc_b}% (${candidato_b} votos)  <br>
+    
+        Inválidos: ${percent_inv}% (${voto_inv} votos)  `
+        
+    }
+</script>
+</html>

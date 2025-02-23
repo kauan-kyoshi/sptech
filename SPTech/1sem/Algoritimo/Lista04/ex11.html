@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    <button onclick="esquerda()">Mover p/ Esquerda</button>
+    <button onclick="direita()">Mover p/ Direita</button>
+    <input type="text" name="" id="mover" placeholder="Quantos pixels">
+    <br><br>
+    <center>
+        
+        <div id="tela">
+            
+            <img id="bart" src="https://img.elo7.com.br/product/685x685/2D4F5DA/matriz-de-bordado-bart-simpson-com-skate-maquina.jpg" width="150"  alt="">
+        </div>
+    </center>
+        
+    </body>
+<script>
+    tela.style.marginLeft = "0px";
+    var pix =0;
+    var cont = 0
+    function esquerda(){
+        pix = Number(mover.value)
+        cont += pix
+
+        tela.style.marginLeft = `${cont}px`
+        
+    }
+
+    function direita(){
+        pix = Number(mover.value)
+        cont -= pix
+
+        tela.style.marginLeft = `${cont}px`
+        
+    }
+    
+
+</script>
+</html>

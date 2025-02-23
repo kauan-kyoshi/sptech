@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+</head>
+<body>
+    Digite o sabor da pizza que deseja: <input type="text" name="" id="sabor">
+    <br>
+    Digite o preço da pizza: <input type="text" name="" id="valor">
+    <br>
+    Digite quantos amigos irão comer: <input type="text" name="" id="amigos">
+    <br><br>
+    <button onclick="calc()">Ver valor por amigo</button>
+    <br><br>
+    <div id="res"></div>
+</body>
+<script>
+    var pizza = ''
+    var preco = 0
+    var friend = 0
+    function calc() {
+        pizza = sabor.value
+        preco = Number(valor.value)
+        friend = Number(amigos.value)
+
+        var valorCaixinha = preco*0.1
+        var tot_pizza = preco+valorCaixinha;
+
+        res.innerHTML = `
+        Cada amigo vai colaborar com R$${tot_pizza/friend} para a pizza de ${pizza}.
+        `
+    }
+</script>
+</html>

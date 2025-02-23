@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05</title>
+</head>
+<body>
+    Digite o valor da passagem de onibus: <input type="text" name="" id="onibus"> 
+    <br>
+    Quantas viagem você faz por mês? <input type="text" name="" id="viagem">
+    <br>
+    Qual a distancia entre sua casa e o trabalho (em Km)? <input type="text" name="" id="km">
+    <br>
+    <br>
+    <button onclick="calc()">CalcularVT</button>
+    <div id="res"></div>
+</body>
+<script>
+
+    var bus = 0
+    var mes = 0
+    var dist = 0 
+
+    function calc(){
+        bus=Number(onibus.value)
+        mes=Number(viagem.value)
+        dist=Number(km.value)
+        //isso gasto em uma viagem
+        var app_viagem = dist*0.75;
+        // quantas vezes faz a viagem de uber
+        var numero_de_viagens_uber= mes  *0.1 
+        //gasto de uber
+        var gasto_uber= numero_de_viagens_uber*app_viagem
+        //quantas vezes faz a viagem de onibus
+        var numero_de_viagens_onibus=mes-numero_de_viagens_uber
+        //gasto de onibus
+        var gasto_de_onibus= bus*numero_de_viagens_onibus
+
+
+        res.innerHTML =`
+        Você vai gastar R$${gasto_de_onibus+gasto_uber} por mês com transporte.  
+        `
+
+    }
+</script>
+
+</html>

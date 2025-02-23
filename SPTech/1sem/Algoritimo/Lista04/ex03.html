@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+</head>
+<body>
+    Digite um numero para ver a sua tabuada: <input type="text" name="" id="tab">
+    <br>
+    <button onclick="calc()">Ver Tabuada</button>
+
+    <div id="tabuada"></div>
+</body>
+<script>
+    var tabuada = 0
+    function calc(){
+        tabuada = Number(tab.value)
+
+        tabuada.innerHTML = `
+        ${tabuada} x 1 = ${tabuada*1} <br>
+        
+        ${tabuada} x 2 = ${tabuada*2} <br>
+        
+        ${tabuada} x 3 = ${tabuada*3} <br>
+        
+        ${tabuada} x 4 = ${tabuada*4} <br>
+        
+        ${tabuada} x 5 = ${tabuada*5} <br>
+        
+        ${tabuada} x 6 = ${tabuada*6} <br>
+        
+        ${tabuada} x 7 = ${tabuada*7} <br>
+        
+        ${tabuada} x 8 = ${tabuada*8} <br>
+        
+        ${tabuada} x 9 = ${tabuada*9} <br>`
+    }
+</script>
+</html>

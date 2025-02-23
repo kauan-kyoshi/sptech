@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+<body>
+    Digite o valor a ser depositado/retirado <input type="text" name="" id="valor">
+    <br><br>
+    <button onclick="dep()">Depositar</button>
+    <button onclick="ret()">Retirar</button>
+    <button onclick="encerra()">Encerrar</button>
+    <br><br>
+    <div id="tela"></div>
+
+</body>
+<script>
+    var num = 0 ;
+    var saldo = 0;
+    var deposito = 0;
+    var retirada = 0;
+
+    function dep(){
+        num = Number(valor.value);
+        saldo += num;
+        deposito += 1;
+        alert(`Depósito de R$${num} efetuado! Saldo atual: R$${saldo}`);
+    }
+
+    function ret(){
+        num = Number(valor.value);
+        saldo -= num;
+        retirada += 1;
+        alert(`Retirada de R$${num} efetuada! Saldo atual: R$${saldo}`);
+    }
+
+    function encerra(){
+        tela.innerHTML = `
+        Total de depósitos realizados: Qtde: ${deposito}  Valor Total: ${saldo}
+        <br>
+        Total de retiradas realizadas: Qtde: ${retirada}  Valor Total: ${saldo}
+        `
+    }
+</script>
+</html>

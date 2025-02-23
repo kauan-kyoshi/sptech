@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+</head>
+<body>
+    <br>
+    <h2>fases de sono</h2>
+    Digite quantas horas de Sono: 
+    <input type="text" name="" id="tmp_sono">
+    <button onclick="carregar()">Calcular Sono</button>
+    <br><br>
+    <b id="res"></b>
+</body>
+<script>
+    var tot_sono=0
+    function carregar(){
+        tot_sono=Number(tmp_sono.value);
+        calc_sono();
+    }
+    function calc_sono(){
+        var sono_5 = tot_sono*0.05
+        var sono_45 = tot_sono*0.45
+        var sono_30 = tot_sono*0.3
+        var sono_20 = tot_sono*0.2
+        res.innerHTML = `
+    Ao dormir ${tot_sono} horas, você dormiu:  <br>
+
+    ${sono_5} horas na fase 1  <br>
+
+    ${sono_45} horas na fase 2  <br>
+
+    ${sono_30} horas na fase 3  <br>
+
+    ${sono_20} horas na fase REM  `
+    }
+</script>
+
+
+</html>

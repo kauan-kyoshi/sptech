@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <div id="tela">
+        <p style="color:blue;">
+            Total guardado no cofrinho: R$0  
+            <br>
+            Depósitos efetuados: 0  
+            <br>
+            Retiradas efetuadas: 0  
+        </p>
+    </div>
+    <button onclick="aumentar_050()">Depositar 0,50</button>
+    <button onclick="aumentar_2()">Depositar 2,00</button>
+    <button onclick="diminuir_050()">Retirar 0,50</button>
+
+</body>
+<script>
+    var total = 0;
+    var deposito =0;
+    var retira = 0
+    function aumentar_050(){
+        total +=0.5;
+        deposito += 1;
+
+        tela.innerHTML = `
+        <p style="color:blue;">
+            Total guardado no cofrinho: R$${total} 
+            <br>
+            Depósitos efetuados: ${deposito}
+            <br>
+            Retiradas efetuadas: ${retira}
+        </p>
+        `
+
+    }
+    function aumentar_2(){
+        total += 2;
+        deposito += 1;
+
+        tela.innerHTML = `
+        <p style="color:blue;">
+            Total guardado no cofrinho: R$${total} 
+            <br>
+            Depósitos efetuados: ${deposito}
+            <br>
+            Retiradas efetuadas: ${retira}
+        </p>
+        `
+    }
+    function diminuir_050(){
+        total -=0.5;
+        retira += 1;
+
+        tela.innerHTML = 
+        `
+        <p style="color:blue;">
+            Total guardado no cofrinho: R$${total}
+            <br>
+            Depósitos efetuados: ${deposito}
+            <br>
+            Retiradas efetuadas: ${retira}
+        </p>
+        `
+    }
+</script>
+</html>
