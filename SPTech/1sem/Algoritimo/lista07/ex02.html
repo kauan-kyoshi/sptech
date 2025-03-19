@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02</title>
+</head>
+<body>
+    Qual a sua nota do ENEM? <input type="text" name="" id="inp_enem">
+    <br>
+    Qual a sua nota do vestibular interno? <input type="text" name="" id="inp_interno">
+    <br>
+    <button onclick="avaliar()">Avaliação</button>
+
+</body>
+<script>
+    function avaliar(){
+        var enem = Number(inp_enem.value);
+        var interno = Number(inp_interno.value);
+        if (enem >=800 || interno >=700 ) {
+            alert(`Parabéns! Aprovado`);
+        }else{
+            alert(`Tente semestre que vem!`);
+        }
+    }
+</script>
+</html>

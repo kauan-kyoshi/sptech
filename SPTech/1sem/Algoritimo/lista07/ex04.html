@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+<body>
+    Qual o método de pagamento?
+    <br><br>
+    <u>Dinheiro</u>
+    <br>
+    <u>Cartão de débito</u>
+    <br>
+    <u>Cartão de crédito</u>
+    <br>
+    <u>Boleto</u>
+    <br><br>
+    <input type="text" name="" id="inp_pagamento">
+    <br><br>
+    <button onclick="compra()">Analisar compra</button>
+    <br>
+    <div id="tela"></div>
+</body>
+<script>
+    function compra(){
+        tela.innerHTML = '';
+        var pagamento = inp_pagamento.value;
+        if(pagamento != 'Dinheiro' && pagamento != 'Cartão de débito' && pagamento != 'Cartão de crédito' && pagamento != 'Boleto'){
+            alert(`voce digitou ${pagamento}, por favor digite corretamente uma das opções: Dinheiro, Cartão de débito, Cartão de crédito ou Boleto.`);
+        }
+
+        if (pagamento == 'Dinheiro' || pagamento == 'Cartão de débito'){
+            tela.innerHTML = `Você terá que pagar a vista`;
+        }
+        if (pagamento == 'Cartão de crédito' || pagamento == 'Boleto') {
+            tela.innerHTML = `Pagamento poderá ser parcelado`;
+        }
+    }
+</script>
+</html>
