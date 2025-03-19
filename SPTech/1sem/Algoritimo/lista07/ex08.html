@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08</title>
+</head>
+<body>
+    Qual o nome da empresa <input type="text" name="" id="inp_empresa">
+    <br>
+    Qual o valor da bolsa da empresa? <input type="text" name="" id="inp_bolsa">
+    <br>
+    Qual o valor do VR da empresa? <input type="text" name="" id="inp_vr">
+    <br>
+    Tempo de deslocamento entre a empresa e a SPTech em minutos: <input type="text" name="" id="inp_deslocamento">
+    <br>
+    <button onclick="prefere()">É preferida?</button>
+    <br>
+    <div id="tela"></div>
+</body>
+<script>
+    function prefere(){
+        var empresa = inp_empresa.value;
+        var bolsa = Number(inp_bolsa.value);
+        var vr = Number(inp_vr.value);
+        var deslocamento = Number(inp_deslocamento);
+
+        if((bolsa>=1800)|| (vr >=20) || (deslocamento <=30)){
+            tela.innerHTML = `A empresa ${empresa} é uma de suas preferências`;
+
+        }else{
+            tela.innerHTML = `A empresa ${empresa} está fora da sua lista` 
+        }
+    }
+</script>
+</html>

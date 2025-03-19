@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex07</title>
 </head>
+
 <body>
     <h2>Calculadora de cansaço do aluno SPTech</h2>
     <br>
@@ -24,32 +26,31 @@
     <button onclick="cansaco()">Calcular cansaço</button>
 </body>
 <script>
-    function cansaco(){
+    function cansaco() {
         //declaração de variaveis
-        var distancia = Number(inp_distancia);
+        var distancia = Number(inp_distancia.value);
         var transporte = inp_transporte.value;
 
-        // validação do input transporte
-        if (transporte != 'Carro' && transporte != 'Ônibus' && transporte != 'Metrô' && transporte != 'Bicicleta' ){
-            alert(`você digitou ${transporte}, por favor digite corretamente uma das opções.`);
-        };
 
 
-        if ((distancia <=10) && (transporte == 'Carro' || transporte == 'Metrô' || transporte == 'Ônibus' )){
-            alert('Tá tranks...')
-        }else{
-            alert('É... um pouco cansado...')
+        if ((distancia <= 10) && ((transporte == 'Carro') || (transporte == 'Metrô') || (transporte == 'Ônibus'))) {
+                alert('Tá tranks...');
+            } else {
+                
+                if (transporte == 'Carro') {
+                    alert('É... um pouco cansado...');
+                };
+                if (transporte == 'Metrô' || transporte == 'Ônibus') {
+                    alert('Bem cansado...');
+                };
+                if (transporte == 'Bicicleta') {
+                    alert('Vish... tá só o pó...');
+                };
+            };
         }
-        if ((distancia > 10) && (transporte == 'Carro')){
-            alert('É... um pouco cansado...')
-        }
-        if ((distancia > 10) && (transporte == 'Metrô' || transporte == 'Ônibus')){
-            alert('Bem cansado...')
-        }
-        if ((distancia > 10) && (transporte == 'Bicicleta')){
-            alert('Vish... tá só o pó...')
-        }
-
-    }
+        
+        
+    
 </script>
+
 </html>
