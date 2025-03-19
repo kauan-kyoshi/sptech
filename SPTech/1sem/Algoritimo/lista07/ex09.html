@@ -6,6 +6,44 @@
     <title>Ex09</title>
 </head>
 <body>
-    
+    Qual a marca da TV? <input type="text" name="" id="inp_marca">
+    <br>
+    Qual o preço da TV? <input type="text" name="" id="inp_preco">
+    <br>
+    <button onclick="compra()">Analisar compra</button>
+    <br>
+    <div id="tela"></div>
+
 </body>
+<script>
+    function compra(){
+        var marca = inp_marca.value;
+        var preco = Number(inp_preco.value);
+        if (preco <= 0 ){
+            alert(`Digite um preço valido.`)
+        }else if(marca == ''){
+            alert('Digite algo no campo marca, por favor.')
+        }else{
+
+            if (preco < 800 || preco >2000){
+                tela.inneHTML = 'TV fora da faixa de preço <br>';
+                if (preco <800){
+                    tela.inneHTML+= `Preço baixo demais!`;
+                }else{
+                    tela.inneHTML += `TV cara demais, infelizmente`;
+                }
+    
+            }
+            if(preco>=800 && preco <=2000){
+                if (marca == 'Mondial' || marca == 'Britânia'){
+                    tela.innerHTML = 'Na faixa de preço, porém marca não confiável'
+                }else if(marca == 'LG' || marca == 'Samsung'){
+                    tela.inneHTML = `Essa TV pode entrar na sua lista!`
+                }
+            }
+        }
+
+
+    }
+</script>
 </html>

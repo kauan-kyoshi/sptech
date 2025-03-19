@@ -13,14 +13,19 @@
 <script>
     function analisar(){
         var temp= Number(inp_temperatura.value);
-        if (temp < 21 || temp > 24 ){
-            alert('Alerta de desconforto!');
-            if(temp<21){
-                alert('As pessoas vão ter hipotermia');
-            }else{
-                alert('As pessoas vão derreter');
-            };
-        }  
+
+        if (temp == ''){
+            alert('digite algum valor no campo solicitado')
+        }else{   
+            if (temp < 21 || temp > 24 ){
+                alert('Alerta de desconforto!');
+                if(temp<21){
+                    alert('As pessoas vão ter hipotermia');
+                }else{
+                    alert('As pessoas vão derreter');
+                };
+            }  
+        }
     };
 
 </script>

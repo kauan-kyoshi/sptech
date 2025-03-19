@@ -17,10 +17,16 @@
     function avaliar(){
         var enem = Number(inp_enem.value);
         var interno = Number(inp_interno.value);
-        if (enem >=800 || interno >=700 ) {
-            alert(`Parabéns! Aprovado`);
+        if (enem < 0 || enem >1000 || enem == '') {
+            alert('Digite um valor válido para a nota do enem.')
+        }else if (interno < 0 || interno == '' ){
+            alert('digite um valor válido do vestibular interno.')
         }else{
-            alert(`Tente semestre que vem!`);
+            if (enem >=800 || interno >=700 ) {
+                alert(`Parabéns! Aprovado`);
+            }else{
+                alert(`Tente semestre que vem!`);
+            }
         }
     }
 </script>

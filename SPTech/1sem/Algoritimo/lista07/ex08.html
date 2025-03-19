@@ -24,13 +24,21 @@
         var bolsa = Number(inp_bolsa.value);
         var vr = Number(inp_vr.value);
         var deslocamento = Number(inp_deslocamento);
-
-        if((bolsa>=1800)|| (vr >=20) || (deslocamento <=30)){
+        
+        if (bolsa <= 0){
+            alert(`Digite um valor válido para a bolsa.`);
+        }else if(vr <=0){
+            alert(`Digite um valor válido para o VR.`);
+        }else if( deslocamento<=0){
+            alert(`Digite um valor valido para o deslocamento.`);
+        }else{
+            if((bolsa>=1800)|| (vr >=20) || (deslocamento <=30)){
             tela.innerHTML = `A empresa ${empresa} é uma de suas preferências`;
 
         }else{
             tela.innerHTML = `A empresa ${empresa} está fora da sua lista` 
         }
     }
+}
 </script>
 </html>

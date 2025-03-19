@@ -9,14 +9,19 @@
     Qual fruta chegou na mesa? <input type="text" name="" id="inp_mesa">
     <br>
     <button onclick="comer()">Vai comer?</button>
+
 </body>
 <script>
     function comer(){
         var fruta= inp_mesa.value
-        if (fruta == 'uva' || fruta == 'abacaxi'){
-            alert(`Sim, vai comer ${fruta}`);
-        } else {
-            alert(`A fruta ${fruta} ela não come`)
+        if (fruta == ''){
+            alert('Digite algo no campo solicitado.')
+        }else{
+            if (fruta == 'uva' || fruta == 'abacaxi'){
+                alert(`Sim, vai comer ${fruta}`);
+            } else {
+                alert(`A fruta ${fruta} ela não come`)
+            }
         }
 
     }

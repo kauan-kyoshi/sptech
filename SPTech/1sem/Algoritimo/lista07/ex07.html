@@ -31,23 +31,28 @@
         var distancia = Number(inp_distancia.value);
         var transporte = inp_transporte.value;
 
-
-
-        if ((distancia <= 10) && ((transporte == 'Carro') || (transporte == 'Metrô') || (transporte == 'Ônibus'))) {
-                alert('Tá tranks...');
-            } else {
-                
-                if (transporte == 'Carro') {
-                    alert('É... um pouco cansado...');
+        if (transporte != 'Carro' && transporte != 'Ônibus' && transporte != 'Metrô' && transporte != 'Bicicleta' ){
+            alert(`você digitou ${transporte}, por favor digite corretamente uma das opções.`)
+        }else if (distancia<=0){
+            alert(`voce digitou ${distancia}, por favor digite uma distancia valida. `)
+        }else{
+            if ((distancia <= 10) && ((transporte == 'Carro') || (transporte == 'Metrô') || (transporte == 'Ônibus'))) {
+                    alert('Tá tranks...');
+                } else {
+                    
+                    if (transporte == 'Carro') {
+                        alert('É... um pouco cansado...');
+                    };
+                    if (transporte == 'Metrô' || transporte == 'Ônibus') {
+                        alert('Bem cansado...');
+                    };
+                    if (transporte == 'Bicicleta') {
+                        alert('Vish... tá só o pó...');
+                    };
                 };
-                if (transporte == 'Metrô' || transporte == 'Ônibus') {
-                    alert('Bem cansado...');
-                };
-                if (transporte == 'Bicicleta') {
-                    alert('Vish... tá só o pó...');
-                };
-            };
+            }
         }
+
         
         
     

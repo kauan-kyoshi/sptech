@@ -28,13 +28,15 @@
         var pagamento = inp_pagamento.value;
         if(pagamento != 'Dinheiro' && pagamento != 'Cartão de débito' && pagamento != 'Cartão de crédito' && pagamento != 'Boleto'){
             alert(`voce digitou ${pagamento}, por favor digite corretamente uma das opções: Dinheiro, Cartão de débito, Cartão de crédito ou Boleto.`);
-        }
-
-        if (pagamento == 'Dinheiro' || pagamento == 'Cartão de débito'){
-            tela.innerHTML = `Você terá que pagar a vista`;
-        }
-        if (pagamento == 'Cartão de crédito' || pagamento == 'Boleto') {
-            tela.innerHTML = `Pagamento poderá ser parcelado`;
+        }else if (pagamento == ''){
+            alert('digite um valor válido.')
+        }else{
+            if (pagamento == 'Dinheiro' || pagamento == 'Cartão de débito'){
+                tela.innerHTML = `Você terá que pagar a vista`;
+            }
+            if (pagamento == 'Cartão de crédito' || pagamento == 'Boleto') {
+                tela.innerHTML = `Pagamento poderá ser parcelado`;
+            }
         }
     }
 </script>

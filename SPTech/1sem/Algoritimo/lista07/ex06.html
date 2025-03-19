@@ -27,15 +27,19 @@
         var transporte = inp_transporte.value;
         if (transporte != 'Carro' && transporte != 'Uber' && transporte != 'Ônibus' && transporte != 'Metrô' && transporte != 'Bicicleta' ){
             alert(`você digitou ${transporte}, por favor digite corretamente uma das opções.`)
-        }
-        if (transporte == 'Carro' || transporte == 'Uber'){
-            alert('Tá tranquilo...')
-        }
-        if (transporte == 'Metrô' || transporte == 'Ônibus'){
-            alert('Um pouco cansado')
-        }
-        if(transporte == 'Bicicleta'){
-            alert('Vish... vive cansado.')
+        }else if (transporte == ''){
+            alert('digite algo no campo solicitado.')
+        }else{
+
+            if (transporte == 'Carro' || transporte == 'Uber'){
+                alert('Tá tranquilo...')
+            }
+            if (transporte == 'Metrô' || transporte == 'Ônibus'){
+                alert('Um pouco cansado')
+            }
+            if(transporte == 'Bicicleta'){
+                alert('Vish... vive cansado.')
+            }
         }
     }
 </script>

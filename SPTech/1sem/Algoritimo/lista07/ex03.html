@@ -18,11 +18,17 @@
         tela.innerHTML = '';
         var individual = Number(inp_individual.value);
         var familiar = Number(inp_familiar.value);
-
-        if(individual <=2000 || familiar <=3000){
-            tela.innerHTML = `Você terá direito ao auxílio`;
-        }else{
-            tela.innerHTML = `Sem direito ao auxílio`;
+        
+        if (individual <=0){
+            alert(`Digite um valor válido para a renda individual`)
+        }else if(familiar<=0){
+            alert('Digite um valor válido para a renda familiar.')
+        }else{   
+            if(individual <=2000 || familiar <=3000){
+                tela.innerHTML = `Você terá direito ao auxílio`;
+            }else{
+                tela.innerHTML = `Sem direito ao auxílio`;
+            }
         }
     }
 </script>
